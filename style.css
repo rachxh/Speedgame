@@ -17,8 +17,9 @@ h1 {
   font-size: 5rem;
   margin: 4rem 0;
 }
-.score {
+#score {
   font-size: 2rem;
+  color: green;
 }
 
 .container {
@@ -38,6 +39,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.circle.active {
+  /* background-image: url("https://cdn.pixabay.com/photo/2016/01/20/17/16/flower-1151963_1280.png"); */
+  background-color: yellow;
+  /* background-image: url(./flower-icon.png);
+  background-attachment: fixed; */
 }
 
 button {
@@ -64,9 +71,9 @@ button {
   align-items: center;
 }
 .modal {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.911);
   padding: 2rem;
-  width: 40%;
+  width: 35%;
   height: 25%;
   border-radius: 10px;
   position: relative;
@@ -80,6 +87,14 @@ button {
   background-color: transparent;
 }
 
-#result {
+.modal p {
   font-size: 1.5rem;
+  margin: 2rem 0;
+  color: rgba(194, 65, 33, 0.973);
+}
+#result {
+  color: green;
+}
+#stop {
+  display: none;
 }
