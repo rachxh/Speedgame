@@ -35,16 +35,14 @@ h1 {
   background-color: saddlebrown;
   display: inline-block;
   margin: 2rem 1rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: url("./img/watering\ can.png"), auto;
 }
 .circle.active {
-  /* background-image: url("https://cdn.pixabay.com/photo/2016/01/20/17/16/flower-1151963_1280.png"); */
   background-color: yellow;
-  /* background-image: url(./flower-icon.png);
-  background-attachment: fixed; */
 }
 
 button {
@@ -97,4 +95,8 @@ button {
 }
 #stop {
   display: none;
+}
+
+.flower {
+  font-size: 4rem;
 }

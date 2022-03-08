@@ -8,6 +8,9 @@ const overlay = document.querySelector("#overlay");
 const scoreText = document.querySelector("#score");
 const resultText = document.querySelector("#result");
 
+const startMusic = document.querySelector("#startMusic");
+const failMusic = document.querySelector("#failMusic");
+
 let active = 0;
 let score = 0;
 let pace = 1000;
@@ -36,6 +39,9 @@ const clickedCircle = (i) => {
 const startGame = () => {
   startButton.style.display = "none";
   endButton.style.display = "inline";
+  startMusic.currentTime = 0;
+  startMusic.play();
+
   for (let i = 0; i < circles.length; i++) {
     circles[i].style.pointEvents = "auto";
   }
@@ -51,7 +57,7 @@ const startGame = () => {
   console.log("active circle:", active);
   timer = setTimeout(startGame, pace);
   pace = pace - 10;
-  if (rounds >= 1) {
+  if (rounds >= 3) {
     endGame();
   }
   rounds++;
@@ -68,6 +74,9 @@ const startGame = () => {
 };
 
 const endGame = () => {
+  startMusic.pause();
+  startMusic.currentTime = 0;
+  failMusic.play();
   console.log("game ended");
   clearTimeout(timer);
   overlay.style.visibility = "visible";
