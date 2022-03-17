@@ -81,7 +81,7 @@ const endGame = () => {
   clearTimeout(timer);
   overlay.style.visibility = "visible";
   if (score === 0) {
-    resultText.textContent = `Your score is ${score}. Oh come onabort, you can do better than this!`;
+    resultText.textContent = `Your score is ${score}. Oh come on, you can do better than this!`;
   } else if (score > 1 || score < 10) {
     resultText.textContent = `Your final score is ${score}, not bad, not bad at all`;
   } else if (score > 11) {
