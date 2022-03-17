@@ -39,12 +39,9 @@ h1 {
   justify-content: center;
   cursor: url("./img/watering\ can.png"), auto;
 }
-.circle.active {
-  background-color: yellow;
-}
+
 .flower.active {
   visibility: visible;
-  font-size: 4rem;
 }
 
 button {
@@ -101,4 +98,5 @@ button {
 
 .flower {
   font-size: 4rem;
+  visibility: hidden;
 }

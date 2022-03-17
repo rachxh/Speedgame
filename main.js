@@ -2,6 +2,7 @@ const startButton = document.querySelector("#start");
 const endButton = document.querySelector("#stop");
 const closeButton = document.querySelector("#close");
 const circles = document.querySelectorAll(".circle");
+const flowers = document.querySelectorAll(".flower");
 
 const overlay = document.querySelector("#overlay");
 
@@ -25,8 +26,6 @@ circles.forEach((circle, i) => {
 });
 
 const clickedCircle = (i) => {
-  console.log("clicked circle was", i);
-
   if (i !== active) {
     endGame();
   } else {
@@ -42,19 +41,18 @@ const startGame = () => {
   startMusic.currentTime = 0;
   startMusic.play();
 
-  for (let i = 0; i < circles.length; i++) {
-    circles[i].style.pointEvents = "auto";
+  for (let i = 0; i < flowers.length; i++) {
+    flowers[i].style.pointEvents = "auto";
   }
-  console.log("game started");
+  // console.log("game started");
 
   let nextActive = pickNew(active);
 
-  circles[nextActive].classList.toggle("active");
-  circles[active].classList.remove("active");
+  flowers[nextActive].classList.toggle("active");
+  flowers[active].classList.remove("active");
 
   active = nextActive;
 
-  console.log("active circle:", active);
   timer = setTimeout(startGame, pace);
   pace = pace - 10;
   if (rounds >= 3) {
