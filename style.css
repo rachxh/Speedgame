@@ -10,7 +10,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /* font-family: "Press Start 2P", cursive; */
   text-align: center;
 }
 h1 {
@@ -35,7 +34,6 @@ h1 {
   background-color: saddlebrown;
   display: inline-block;
   margin: 2rem 1rem;
-  /* cursor: pointer; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +41,10 @@ h1 {
 }
 .circle.active {
   background-color: yellow;
+}
+.flower.active {
+  visibility: visible;
+  font-size: 4rem;
 }
 
 button {
