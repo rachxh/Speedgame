@@ -17,6 +17,7 @@ let score = 0;
 let pace = 1000;
 let rounds = 0;
 let timer;
+let gameRun = false;
 
 const getRndInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,6 +27,9 @@ circles.forEach((circle, i) => {
 });
 
 const clickedCircle = (i) => {
+  if (gameRun === false) {
+    return;
+  }
   if (i !== active) {
     endGame();
   } else {
@@ -36,6 +40,7 @@ const clickedCircle = (i) => {
 };
 
 const startGame = () => {
+  gameRun = true;
   startButton.style.display = "none";
   endButton.style.display = "inline";
   startMusic.currentTime = 0;
@@ -44,7 +49,6 @@ const startGame = () => {
   for (let i = 0; i < flowers.length; i++) {
     flowers[i].style.pointEvents = "auto";
   }
-  // console.log("game started");
 
   let nextActive = pickNew(active);
 
